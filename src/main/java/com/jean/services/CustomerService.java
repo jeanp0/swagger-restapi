@@ -27,7 +27,7 @@ public class CustomerService {
 		return repo.save(customer);
 	}
 	
-	public void delete(Customer id) {
-		repo.delete(id);
+	public void delete(String id) {
+		repo.deleteById(id);
 	}
 }
