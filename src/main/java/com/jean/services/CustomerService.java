@@ -1,19 +1,22 @@
 package com.jean.services;
 
-import java.util.List;
-import java.util.Optional;
-
+import com.jean.entity.Customer;
+import com.jean.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.jean.entity.Customer;
-import com.jean.repository.ICustomerRepository;
+import java.util.List;
+import java.util.Optional;
 
 
 @Service
 public class CustomerService {
+	private final CustomerRepository repo;
+
 	@Autowired
-	private ICustomerRepository repo;
+	public CustomerService(CustomerRepository repo) {
+		this.repo = repo;
+	}
 
 	public List<Customer> list() {
 		return repo.findAll();

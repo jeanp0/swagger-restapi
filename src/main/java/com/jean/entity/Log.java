@@ -1,17 +1,15 @@
 package com.jean.entity;
 
 import java.time.LocalDateTime;
-import java.util.Date;
 
-import javax.persistence.Id;
 
 public class Log {
 	private LocalDateTime dateTime;
 	private String controllerURI;
-	private String methodURI;
+	private String javaMethod;
 	private Object input;
 	private Object output;
-	private String typeRequestMethod;
+	private String httpMethod;
 
 	public LocalDateTime getDateTime() {
 		return dateTime;
@@ -29,12 +27,12 @@ public class Log {
 		this.controllerURI = controllerURI;
 	}
 
-	public String getMethodURI() {
-		return methodURI;
+	public String getJavaMethod() {
+		return javaMethod;
 	}
 
-	public void setMethodURI(String methodURI) {
-		this.methodURI = methodURI;
+	public void setJavaMethod(String javaMethod) {
+		this.javaMethod = javaMethod;
 	}
 
 	public Object getInput() {
@@ -53,18 +51,18 @@ public class Log {
 		this.output = output;
 	}
 
-	public String getTypeRequestMethod() {
-		return typeRequestMethod;
+	public String getHttpMethod() {
+		return httpMethod;
 	}
 
-	public void setTypeRequestMethod(String typeRequestMethod) {
-		this.typeRequestMethod = typeRequestMethod;
+	public void setHttpMethod(String httpMethod) {
+		this.httpMethod = httpMethod;
 	}
 
 	@Override
 	public String toString() {
-		return "Log [dateTime=" + dateTime + ", controllerURI=" + controllerURI + ", methodURI=" + methodURI
-				+ ", input=" + input + ", output=" + output + ", typeRequestMethod=" + typeRequestMethod + "]";
+		return "Log [dateTime=" + dateTime + ", controllerURI=" + controllerURI + ", javaMethod=" + javaMethod
+				+ ", input=" + input + ", output=" + output + ", httpMethod=" + httpMethod + "]";
 	}
 
 }

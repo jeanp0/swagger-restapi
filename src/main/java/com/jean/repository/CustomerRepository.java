@@ -1,5 +1,7 @@
 package com.jean.repository;
 
-public class CustomerRepository {
+import com.jean.entity.Customer;
+import org.springframework.data.jpa.repository.JpaRepository;
 
+public interface CustomerRepository extends JpaRepository<Customer, String> {
 }
